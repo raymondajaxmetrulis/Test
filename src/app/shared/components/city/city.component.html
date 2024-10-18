@@ -1,0 +1,18 @@
+<mat-card>
+    <img mat-card-avatar [src]="city.NationFlag">
+    <mat-card-title>{{ city.CityName }}</mat-card-title>
+    <mat-card-subtitle>{{ city.Nation }}</mat-card-subtitle>
+    <img mat-card-image class="city" [src]="city.CityImage">
+    <mat-card-content>{{ city.Description }}</mat-card-content>
+    <p>Population:</p>
+    <div class="d-inline-flex justify-content-center">
+        <button mat-button class="border">
+            NUKE
+        </button>
+        <p>{{ city.Population }}</p>
+        <button mat-button class="border">
+            GROW
+        </button>
+    </div>
+   
+</mat-card>

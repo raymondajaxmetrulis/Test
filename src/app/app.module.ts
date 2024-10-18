@@ -4,6 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
+import { NavModule } from './common/nav.module';
+
+import { StoreModule } from '@ngrx/store';
+import { populationReducer } from './state/reducers/population.reducer';
 
 
 @NgModule({
@@ -13,7 +17,9 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NavModule,
+    StoreModule.forRoot({ population: populationReducer })
   ],
   bootstrap: [AppComponent]
 })
